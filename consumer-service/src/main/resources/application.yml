@@ -1,0 +1,23 @@
+# 应用名称
+spring:
+  application:
+    name: consumer-service
+
+# 服务器端口
+server:
+  port: 8090
+
+# Dubbo配置
+dubbo:
+  # 应用配置
+  application:
+    name: consumer-service
+  # 注册中心配置
+  registry:
+    address: nacos://localhost:8848  # Nacos服务器地址
+    username: nacos                   # Nacos用户名
+    password: nacos                   # Nacos密码
+  # 消费者配置
+  consumer:
+    timeout: 3000                     # 超时时间
+    check: false                      # 启动时不检查服务是否存在
