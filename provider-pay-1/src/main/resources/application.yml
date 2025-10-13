@@ -1,0 +1,23 @@
+# 应用名称
+spring:
+  application:
+    name: provider-pay-1
+
+# 服务器端口
+server:
+  port: 8082
+
+# Dubbo配置
+dubbo:
+  application:
+    name: pay-service
+    register-mode: instance
+  registry:
+    address: nacos://localhost:8848
+    username: nacos
+    password: nacos
+  protocol:
+    name: dubbo
+    port: -1  # 不同的端口
+  scan:
+    base-packages: com.example.dubbo.provider.service.pay

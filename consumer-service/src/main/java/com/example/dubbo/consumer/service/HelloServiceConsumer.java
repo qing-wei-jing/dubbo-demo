@@ -1,6 +1,6 @@
 package com.example.dubbo.consumer.service;
 
-import com.example.dubbo.service.HelloService;
+import com.example.dubbo.service.hello.HelloService;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +13,10 @@ public class HelloServiceConsumer {
     
     public String sayHello(String name) {
         return helloService.sayHello(name);
+    }
+
+    public String sayGoodBye(String name) {
+        return helloService.sayGoodBye(name);
     }
     
     public String getProviderInfo() {

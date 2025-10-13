@@ -9,14 +9,16 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Dubbo3 Nacos Demo</name>
+
     <description>A demo project for Dubbo3 with Nacos and Spring Boot</description>
 
     <!-- 子模块 -->
     <modules>
         <module>common-interface</module>
-        <module>provider-service-1</module>
-        <module>provider-service-2</module>
-        <module>provider-service-3</module>
+        <module>provider-hello-1</module>
+        <module>provider-pay-1</module>
+        <module>provider-hello-12</module>
+        <module>provider-hello-11</module>
         <module>consumer-service</module>
     </modules>
 
