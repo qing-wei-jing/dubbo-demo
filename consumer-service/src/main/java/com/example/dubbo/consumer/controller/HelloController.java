@@ -3,6 +3,7 @@ package com.example.dubbo.consumer.controller;
 import com.example.dubbo.consumer.service.HelloServiceConsumer;
 import com.example.dubbo.consumer.service.PayServiceConsumer;
 import com.example.dubbo.service.pay.PayService;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,7 +23,9 @@ public class HelloController {
     private PayServiceConsumer payServiceConsumer;
     
     @GetMapping("/hello")
-    public String hello(@RequestParam(value = "name", defaultValue = "World") String name) {
+    public String hello(@RequestParam(value = "name") String name, HttpServletRequest request) {
+        String header = request.getHeader("content-type");
+        String header2 = request.getHeader("Content-Type");
         return helloServiceConsumer.sayHello(name);
     }
     
