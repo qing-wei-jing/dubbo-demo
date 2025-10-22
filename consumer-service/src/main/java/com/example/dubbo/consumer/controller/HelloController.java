@@ -31,7 +31,7 @@ public class HelloController {
     
     @GetMapping("/pay")
     public String getPay() {
-        return "当前调用的服务: " + payServiceConsumer.weChatPay("pay ");
+        return "当前调用的服务: " + payServiceConsumer.weChatPay("张三");
     }
 }
     

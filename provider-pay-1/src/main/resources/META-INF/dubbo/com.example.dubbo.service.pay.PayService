@@ -1,0 +1,2 @@
+wechat = com.example.dubbo.provider.service.WeChatPayServiceImpl
+zhifubao = com.example.dubbo.provider.service.ZhiFuBaoPayServiceImpl
