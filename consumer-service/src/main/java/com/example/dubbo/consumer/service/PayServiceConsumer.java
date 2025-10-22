@@ -8,15 +8,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class PayServiceConsumer {
     // 引用远程服务，group与服务提供者一致
-
+    @DubboReference(group = "pay-service-group")
     private PayService payService;
 
     public String weChatPay(String name) {
-        return payService.weChatPay(name);
-    }
-
-    public String aliPay(String name) {
-        return payService.aliPay(name);
+        return payService.pay(name);
     }
 
 }
